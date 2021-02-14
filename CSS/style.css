@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/*Menu*/
+
+header{
+    background-color: lime;
+    height: 75px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+    box-shadow: 5px 0px 10px rgba(0,0,0, 0.6);
+}
+#perfil{
+    border-radius: 100%;
+    border: black 5px solid;
+}
+.btn_menu{
+    font-size: 150%;
+    margin-right: 30px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+.logo{
+    color: white;
+    font-size: 35px;
+    padding: 0 80px;
+    font-weight: bold;
+}
+nav{
+    display: flex;
+    list-style: none;
+    margin-right: 30px;
+}
+nav>li{
+    border-radius: 3px;
+    margin: 0 5px;
+}
+nav>li>a{
+    padding: 7px 13px;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    color: white;
+}
+nav>li:hover, li.active{
+    background-color: rgba(0,0,0, 0.3);
+    transition: 2s;
+}
+
+nav.show{
+    top: 65px;
+}
+@media screen and (max-width: 952px){
+    .logo{
+        font-size: 30px;
+        padding-left: 35px;
+    }
+    nav>li>a{
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 858px){
+    nav{
+        height: 65px;
+    }
+    .btn_menu{
+        display: inline-flex;
+    }
+    nav{
+        position: fixed;
+        width: 100vw;
+        height: calc(100% - 65px);
+        background-color: black;
+        top: -100vh;
+        text-align: center;
+        transition: all 0.5s;
+        flex-direction: column;
+    }
+    nav>li{
+        margin: 30px 0 0 0;
+        line-height: 30px;
+    }
+    nav>li:hover{
+        background-color: none;
+    }
+    nav>li>a{
+        font-size: 20px;
+        color: white;
+        font-weight: bold;
+    }
+    nav>li>a:hover{
+        color: lime;
+    }
+    .logo{
+        font-size: 25px;
+        padding-left: 35px;
+    }
+}
+@media screen and (max-width: 858px) and (orientation: landscape){
+    nav>li{
+        margin: 5px 0 0 0;
+    }
+    nav{
+        overflow: scroll;
+        height: calc(100% - 65px);
+    }
+}
+/**/
